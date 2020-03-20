@@ -55,7 +55,7 @@ var app = new Vue({
     forward: function() {
       this.message = new ROSLIB.Message({
         linear: {
-          x: 0,
+          x: 1,
           y: 0,
           z: 0,
         },
