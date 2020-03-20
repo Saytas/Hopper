@@ -1,0 +1,8 @@
+prefix=/home/sytasch/ROS/Hopper/catkin_ws/devel
+
+Name: rotate_hopper
+Description: Description of rotate_hopper
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

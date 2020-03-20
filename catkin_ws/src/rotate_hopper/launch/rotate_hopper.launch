@@ -1,0 +1,4 @@
+<launch>
+	<node pkg="rotate_hopper" type="rotate.py" name="rotate_hopper_node" output="screen">
+	</node>
+</launch>

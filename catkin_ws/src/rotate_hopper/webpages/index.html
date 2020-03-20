@@ -1,0 +1,86 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script type="text/javascript" src="https://static.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+    <!-- production version, optimized for size and speed -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  </head>
+  <body>
+
+
+
+    <div id="app" class="container">
+      <div class="jumbotron">
+        <h1>Hopper Kobuki</h1>
+      </div>
+
+      <div class="row" style="max-height:200px;">
+        <div class="col-md-6">
+          <h3>Connection Status</h3>
+          <p class="text-success" v-if="connected">Connected!</p>
+          <p class="text-danger" v-if="!connected">Not Connected!</p>
+          <!-- v-else-->
+          <label>Websocket server address</label>
+          <input type="text" v-model="ws_address" />
+          <br/>
+
+          <button class="btn btn-danger" @click="disconnect" v-if="connected">Disconnect!</button>
+          <button class="btn btn-success" @click="connect" v-else>Connect!</button>
+        </div>
+
+        <div class="col-md-6" style="max-height:200px; overflow:auto;">
+          <h3>Log messages</h3>
+          <div>
+            <p v-for="log in logs">
+              {{ log }}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <p>Communicate to Hopper through RosBridge</p>
+    </div>
+
+
+
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h5>Commands</h5>
+      </div>
+
+      <!-- 1st Row -->
+      <div class="col-md-12 text-center">
+        <button class="btn btn-primary" @click="forward" :disabled="loading || !connected">Go Forward</button>
+        <br></br>
+      </div>
+
+      <!-- 2nd Row -->
+      <div class="col-md-4 text-center">
+        <button class="btn btn-primary" @click="turnLeft" :disabled="loading || !connected">Turn Left</button>
+      </div>
+
+
+      <div class="col-md-4 text-center">
+        <button class="btn btn-danger" @click="stop" :disabled="loading || !connected">Stop</button>
+        <br></br>
+      </div>
+
+      <div class="col-md-4 text-center">
+        <button class="btn btn-primary" @click="turnRight" :disabled="loading || !connected">Turn Right</button>
+      </div>
+
+      <!-- 3rd Row -->
+      <div class="col-md-12 text-center">
+        <button class="btn btn-primary" @click="backward" :disabled="loading || !connected">Go Bakcward</button>
+      </div>
+    </div>
+
+
+
+    <script type="text/javascript" src="main.js"></script>
+
+
+
+  </body>
+</html>
+
