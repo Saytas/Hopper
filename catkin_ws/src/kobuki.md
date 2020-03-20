@@ -1,6 +1,6 @@
 <code>
 
-$ roscore (Only run when working with simulator, otherwise skip it)
+$ roscore
 
 $ roslaunch kobuki_node minimal.launch
 
@@ -18,4 +18,5 @@ Topics:
   - /mobile_base/version_info
   - /odom
   - /tf
+
 </code>

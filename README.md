@@ -1,6 +1,6 @@
 <code>
 
-$ virtualenv venv --python=python3 (I might need to create the virtual env outside of the webpages folder)
+$ virtualenv venv --python=python3
 
 $ source venv/bin/activate
 
