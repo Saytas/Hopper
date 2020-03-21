@@ -1,0 +1,8 @@
+prefix=/home/sytasch/ROS/Hopper/catkin_ws/install
+
+Name: odom_subscriber
+Description: Description of odom_subscriber
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

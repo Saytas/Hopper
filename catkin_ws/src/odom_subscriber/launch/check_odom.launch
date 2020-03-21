@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="odom_subscriber" type="check_odom.py" name="check_odom_node" output="screen">
+  </node>
+</launch>

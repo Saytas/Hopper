@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="odom_subscriber" type="odom_sub" name="odom_sub_node" output="screen">
+  </node>
+</launch>

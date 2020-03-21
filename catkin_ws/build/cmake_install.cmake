@@ -126,6 +126,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/sytasch/ROS/Hopper/catkin_ws/build/gtest/cmake_install.cmake")
+  include("/home/sytasch/ROS/Hopper/catkin_ws/build/odom_subscriber/cmake_install.cmake")
   include("/home/sytasch/ROS/Hopper/catkin_ws/build/rotate_hopper/cmake_install.cmake")
 
 endif()

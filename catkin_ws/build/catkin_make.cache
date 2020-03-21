@@ -1,2 +1,2 @@
-rotate_hopper
+odom_subscriber:rotate_hopper
 -DCATKIN_DEVEL_PREFIX=/home/sytasch/ROS/Hopper/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/sytasch/ROS/Hopper/catkin_ws/install -G Unix Makefiles
